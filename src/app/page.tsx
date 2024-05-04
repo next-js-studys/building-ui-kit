@@ -10,7 +10,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Input size="md" />
+      <Input />
       <Button color="secondary" onClick={allert}  >Click Me!</Button>
     </div>
   );

@@ -10,6 +10,9 @@ const inputStyle = tv({
             md: "p-2",
             lg: "p-3"
         }
+    },
+    defaultVariants: {
+        size: "sm"
     }
 })
 
