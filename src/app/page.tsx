@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Input />
-      <Button color="secondary" onClick={allert}  >Click Me!</Button>
+      <Button onClick={allert} className="bg-sky-500" >Click Me!</Button>
     </div>
   );
 }
