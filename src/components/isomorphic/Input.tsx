@@ -1,5 +1,5 @@
 import React from 'react'
-import { tv } from 'tailwind-variants'
+import { type VariantProps, tv } from 'tailwind-variants'
 
 
 const inputStyle = tv({
@@ -13,10 +13,20 @@ const inputStyle = tv({
     }
 })
 
-interface InputProps {
-    size: "sm" | "md" | "lg"
-}
-export const Input = ({ size }: InputProps) => {
+
+
+// === code before infering type====
+
+// interface InputProps {
+//     size: "sm" | "md" | "lg"
+// }
+
+
+
+// === code after infering type ====
+
+type inputVariant = VariantProps<typeof inputStyle>
+export const Input = ({ size }: inputVariant) => {
     return (
         <input type="text" className={inputStyle({ size })} />
     )
