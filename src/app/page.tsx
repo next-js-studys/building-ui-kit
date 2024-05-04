@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/isomorphic/Button";
+import { Input } from "@/components/isomorphic/Input";
 
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Button color="primary" onClick={allert}>Touch Me</Button>
+      <Input size="md" />
       <Button color="secondary" onClick={allert}  >Click Me!</Button>
     </div>
   );
