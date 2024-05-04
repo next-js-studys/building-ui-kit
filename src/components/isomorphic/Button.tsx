@@ -12,14 +12,14 @@ const buttonStyle = tv({
     }
 })
 
-interface ButtonProps {
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode,
     color: "primary" | "secondary"
 }
 
-export const Button = ({ color, children }: ButtonProps) => {
+export const Button = ({ color, children, ...props }: ButtonProps) => {
     return (
-        <button className={buttonStyle({ color })}>
+        <button className={buttonStyle({ color })} {...props}>
             {children}
         </button>
     )

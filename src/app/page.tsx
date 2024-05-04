@@ -1,11 +1,16 @@
+"use client"
+
 import { Button } from "@/components/isomorphic/Button";
-import Image from "next/image";
 
 export default function Home() {
+
+  const allert = () => {
+    return alert("hey there!")
+  }
   return (
     <div>
-      <Button color="primary">Touch Me</Button>
-      <Button color="secondary"   >Click Me!</Button>
+      <Button color="primary" onClick={allert}>Touch Me</Button>
+      <Button color="secondary" onClick={allert}  >Click Me!</Button>
     </div>
   );
 }
