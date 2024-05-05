@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/components/isomorphic/Button";
 import { Input } from "@/components/isomorphic/Input";
+import { Button } from "@/components/isomorphic/button/Button";
 
 export default function Home() {
 
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Input />
-      <Button onClick={allert} className="bg-sky-500" >Click Me!</Button>
+      <Button onClick={allert} color="primary" className="bg-sky-500" >Click Me!</Button>
     </div>
   );
 }

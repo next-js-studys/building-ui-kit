@@ -1,7 +1,7 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { type VariantProps, tv } from 'tailwind-variants'
+import { tv } from 'tailwind-variants'
 
 const buttonStyle = tv({
     base: 'text-white bg-lime-500 rounded-full active:opacity-80',
@@ -17,15 +17,15 @@ const buttonStyle = tv({
     }
 })
 
-type Buttonvariants = VariantProps<typeof buttonStyle>
+// type Buttonvariants = VariantProps<typeof buttonStyle>
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode,
-    color?: Buttonvariants['color']
+    color?: "primary" | "secondary" | "red"
 
 }
 
-export const Button = ({ color, children, className, ...props }: ButtonProps) => {
+export const Button = ({ color = "primary", children, className, ...props }: ButtonProps) => {
     return (
         <button className={twMerge(buttonStyle({ color }), className)} {...props}>
             {children}
